@@ -28,6 +28,24 @@ def hangman(life, tried_letters):
     if len(tried_letters) >= 1:
         print("Used letters: {}".format(", ".join(letters for letters in tried_letters)))
 
+    if life == 8:
+        print ("               ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+
+    if life == 7:
+        print (" _________     ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+        print ("|              ")
+
     if life == 6:
         print (" _________     ")
         print ("|         |    ")
@@ -158,7 +176,7 @@ def play(letters, random_word, life):
                 elif life == 0:
                     hangman(life, tried_letters)
                     print('\nThe word is {0}'.format(random_word))
-                    print("The Hangman was hanged. You loose!")
+                    print("Game Over! You loose!")
                     input()
                     play_again()
 
