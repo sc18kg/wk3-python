@@ -115,7 +115,7 @@ def print_error(why):
 
 def play_again():
     prompt = str(input("\n\nWanna play again? ")).lower()
-    yes = ['yes','y', 'ye', 's','sim','si']
+    yes = ['yes','y', 'ye']
     no = ['no', 'n', 'nao', 'na']
     if prompt in yes:
         global life

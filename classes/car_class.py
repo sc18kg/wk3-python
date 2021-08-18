@@ -15,15 +15,14 @@ class Car:
         else:
             self.speed = self.max
             print(f"You've reached the Limit of {self.max}! Cannot Go Faster!")
-
+        # self.speed = min(self.max, self._speed + up)
     def decelerate(self, down):
         if (self.speed - down) > 0:
             self.speed -= down
-
         elif (self.speed - down) <= 0:
             self.speed = 0
             print(f"Car Stopped")
-
+        # self.speed = max(0, self-speed - down)
     def getspeed(self):
         print(self.speed)
 
@@ -37,3 +36,6 @@ car.decelerate(40)
 car.getspeed()
 car.decelerate(70)
 car.getspeed()
+
+#if __name__ == "__main__":
+#    do this code                A way to test where only if the file is the main is ran
